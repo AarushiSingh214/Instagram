@@ -61,6 +61,7 @@ Here's a walkthrough of implemented user stories:
 <img src='logot_icon.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='register.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='user_persists.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='user_profile.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with [Kap](https://getkap.co/).
