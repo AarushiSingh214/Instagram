@@ -62,6 +62,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private TextView tvUsername;
         private ImageView ivImage;
         private TextView tvDescription;
+        private ImageView ivHeart;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -69,6 +70,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             tvUsername = itemView.findViewById(R.id.tvUsername);
             ivImage = itemView.findViewById(R.id.ivImage);
             tvDescription = itemView.findViewById(R.id.tvDescription);
+            ivHeart = itemView.findViewById(R.id.ivHeart);
         }
 
         public void bind(Post post) {
@@ -86,6 +88,18 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                     Intent i = new Intent(context, PostDetailsActivity.class);
                     i.putExtra("post", Parcels.wrap(post));
                     context.startActivity(i);
+                }
+            });
+
+            ivHeart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(ivHeart.getDrawable().equals(R.drawable.ufi_heart_active)){
+                        ivHeart.setImageResource(R.drawable.ufi_heart);
+                    }else{
+                        ivHeart.setImageResource(R.drawable.ufi_heart_active);
+
+                    }
                 }
             });
 
